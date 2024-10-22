@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> resume</title>
+        <link rel="stylesheet" href="style/nav.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+            rel="stylesheet">
+
+</head>
+<body>
+
+            <nav>
+                <ul>
+                    <li style="color: brown; font-size: 2rem ;font-family: Playwrite GB S, cursive;">Kibish Daniel<img src="images/memoji.jpg" alt="me" class="round-image"></li>
+                    <li><a href="#">home page</a></li>
+                    <li><a href="#h2About">about</a></li>
+                    <li><a href="#projects">my works</a></li>
+                    <li><a href="#contact">contact</a></li>
+
+
+                </ul>
+            </nav>
+                <br>
+                <br>
+                <br>
+
+        <section id="languages" style="background-image: url(images/bg1.jpg);" >
+                <h1 style="font-size: 3rem; font-family: Georgia, 'Times New Roman', Times, serif;">Resume</h1>
+                <section id="tech" style="background-image: url(images/hacker-wallpaper.jpg);">
+                    <div class="circle" >
+                        <img src="images/htmlImage2.jpg" alt="html" class="circle-image">
+                    </div>
+                    <div class="circle">
+                        <img src="images/cssImage.png" alt="css" class="circle-image">
+                    </div>
+                    <div class="circle">
+                        <img src="images/jsImage.webp" alt="js" class="circle-image">
+                    </div>
+                    <div class="circle">
+                        <img src="images/gitImage.png" alt="git" class="circle-image">
+                    </div>  
+                </section>
+        </section>
+        <br>
+        <br>
+        <h2 id="h2About">About me </h2>
+        <section id="aboutMe">   
+            <div id="me"> <img src="images/MyPhoto.jpg" alt="myPhoto" id="MyImage"></div>
+            <div style="text-align: center; font-size: 2rem;">I am a beginner programmer with great ambitions and a desire to learn new things! I believe that I can be useful and
+            prove myself in any job!</div>
+
+        </section>
+        <section id="projects" style="height: 2000px;">
+            <div style="font-size: 5rem;text-align: center;">here will be my projects</div>
+        </section>
+    
+            <p style="text-align: center; font-size: 3rem;">Contact</p>
+            
+            <div id="contact-container">
+                <div id="contact">
+                    <form action="" name="forme">
+                        <label for="">Name</label>
+                        <br>
+                        <input type="text" name="FirstName">
+                        <br><br><br>
+            
+                        <label for="">Surname</label>
+                        <br>
+                        <input type="text" name="LastName">
+                        <br><br><br>
+            
+                        <label for="">Phone Number</label>
+                        <br>
+                        <input type="number" name="PhoneNumber">
+                        <br><br><br>
+            
+                        <label for="">Mail</label>
+                        <br>
+                        <input type="email" name="mail">
+                        <br><br><br>
+            
+                        <label for="">Message</label>
+                        <br>
+                        <input type="text" name="Message" id="MessageInput">
+                        <br>
+                        <input type="button" value="click" onclick="hello()">
+                    </form>
+                </div>
+            
+                <div id="image-container">
+                    <img src="images/mail7.png" alt="mail" class="mailImage">
+                </div>
+            </div>
+            <section>
+            <div id="contact-container">
+                <div class="image-item">
+                    <img src="images/inst.png" alt="Instagram" class="contact-image" onclick="showInfo('instagram-info')">
+                    <p id="instagram-info" class="hidden">Instagram: @daniakibish</p>
+                </div>
+            
+                <div class="image-item">
+                    <img src="images/facebook.png" alt="Facebook" class="contact-image" onclick="showInfo('facebook-info')">
+                    <p id="facebook-info" class="hidden">Facebook: Daniel Kibish</p>
+                </div>
+            
+                <div class="image-item">
+                    <img src="images/googleMap.png" alt="Address" class="contact-image" onclick="showInfo('address-info')">
+                    <p id="address-info" class="hidden">Netanya.Israel</p>
+                </div>
+            
+                <div class="image-item">
+                    <img src="images/whatsappImage.webp" alt="WhatsApp" class="contact-image" onclick="showInfo('whatsapp-info')">
+                    <p id="whatsapp-info" class="hidden">WhatsApp: +972535698085</p>
+                </div>
+                <div class="image-item">
+                    <img src="images/mailIcon.png" alt="Email" class="contact-image" onclick="showInfo('email-info')">
+                    <p id="email-info" class="hidden">Email: dankibish@gmail.com</p>
+                </div>
+            </div>
+
+            </section>
+
+                <footer>
+                    was created and designed by Kibish Daniel
+                </footer>
+                
+                <script>
+                    function hello(){
+                        
+                        let name = document.forme.FirstName.value
+                        alert("Hello "  +  name  +  " " + "thank you for your message, I promise to get back to you soon ");
+                    }
+                    function showInfo(id) {
+                        var info = document.getElementById(id);
+                        info.classList.add("visible");
+                        info.classList.remove("hidden");
+                    }
+
+                </script>
+            </form>
+        </section>
+</body> 
+</html> 

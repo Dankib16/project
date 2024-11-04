@@ -17,6 +17,8 @@ justify-content: space-between;
 margin: 0;
 padding: 0;
 display: flex;
+overflow-x: auto;
+    white-space: nowrap;
 
 }
 
@@ -24,6 +26,8 @@ nav ul li {
 flex-grow: 1;
 margin-right: 15px;
 text-align: center;
+flex-shrink: 0;
+    padding: 10px;
 
 }
 
@@ -191,4 +195,97 @@ body {
     width: 400px;
     height: 400px;
 
+}
+.projectsBox {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 400px);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.box {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 50px;
+    transition: all 0.5s ease-in-out
+}
+
+.box:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.imge {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+.relocate {
+    display: inline-block;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #76c7c0;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Arial, sans-serif;
+}
+
+.relocate:hover {
+    background-color: #5ab3a7;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        background-color: #333;
+    }
+
+    #languages,
+    #tech,
+    .projectsBox {
+        padding: 10px;
+        height: auto;
+    }
+
+    .projectsBox {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #MessageInput {
+        width: 100%;
+        height: 200px;
+    }
+
+    #contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-image {
+        width: 100px;
+        height: 100px;
+    }
 }
